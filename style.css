@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.movie-container select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  background-color: #1b1a26;
+  padding: 10px 20px;
+}
+
+.showcase li {
+  margin: 0 10px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase li .seat {
+  transform: scale(1);
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 14px;
+  margin: 3px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.selected {
+  background-color: #6feaf6;
+}
+
+.occupied {
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 700px;
+}
+
+.row {
+  display: flex;
+}
+
+.row .seat:nth-child(2) {
+  margin-right: 20px;
+}
+
+.row .seat:nth-last-child(2) {
+  margin-left: 20px;
+}
+
+.screen {
+  background-color: #ffffff;
+  height: 100px;
+  width: 100%;
+  margin: 0px 0;
+  transform: rotateX(-45deg);
+}
+
+.text span {
+  color: #6feaf6;
+}
